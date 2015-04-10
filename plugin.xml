@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.telerik.zip"
+	version="1.0.0">
+	<name>Telerik ZIP Plugin</name>
+	<description>A Cordova plugin for zipping and unzipping files</description>
+	<license>MIT</license>
+	<keywords>cordova,device</keywords>
+	<engines>
+		<engine name="cordova" version=">=2.7.0" />
+	</engines>
+	<platform name="ios">
+        <framework src="src/ios/Zip.framework" custom="true"/>
+        <framework src="Foundation.framework" weak="true" />
+	</platform>
+</plugin>
