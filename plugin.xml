@@ -13,5 +13,6 @@
 	<platform name="ios">
         <framework src="src/ios/Zip.framework" custom="true"/>
         <framework src="Foundation.framework" weak="true" />
+        <framework src="libz.dylib" />
 	</platform>
 </plugin>
