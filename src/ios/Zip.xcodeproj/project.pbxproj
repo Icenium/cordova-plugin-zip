@@ -34,6 +34,7 @@
 		02F248AE1AD7ABFC0094733E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248911AD7A4B40094733E /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AF1AD7ABFD0094733E /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248931AD7A4B40094733E /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248B01AD7AC000094733E /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248941AD7A4B40094733E /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87CA81321C3E91DA006682C9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 87CA81311C3E91DA006682C9 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		02F248931AD7A4B40094733E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		02F248941AD7A4B40094733E /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		02F248951AD7A4B40094733E /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		87CA81311C3E91DA006682C9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				02F2488A1AD7A4B40094733E /* minizip */,
 				02F248941AD7A4B40094733E /* SSZipArchive.h */,
 				02F248951AD7A4B40094733E /* SSZipArchive.m */,
+				87CA81311C3E91DA006682C9 /* Common.h */,
 			);
 			path = Zip;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87CA81321C3E91DA006682C9 /* Common.h in Headers */,
 				02F248AB1AD7ABF50094733E /* crypt.h in Headers */,
 				02F248AC1AD7ABF70094733E /* ioapi.h in Headers */,
 				02F248B01AD7AC000094733E /* SSZipArchive.h in Headers */,
@@ -555,6 +559,7 @@
 				02F248A61AD7AB3A0094733E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
