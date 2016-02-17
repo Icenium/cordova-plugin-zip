@@ -1038,7 +1038,7 @@ local int unz64local_GetCurrentFileInfoInternal (unzFile file,
             /* ZIP64 extra fields */
             if (headerId == 0x0001)
             {
-                                                        uLong uL;
+                                                        uLong uLZip64;
 
                                                                 if(file_info.uncompressed_size == (ZPOS64_T)(unsigned long)-1)
                                                                 {
@@ -1062,7 +1062,7 @@ local int unz64local_GetCurrentFileInfoInternal (unzFile file,
                                                                 if(file_info.disk_num_start == (unsigned long)-1)
                                                                 {
                                                                         /* Disk Start Number */
-                                                                        if (unz64local_getLong(&s->z_filefunc, s->filestream,&uL) != UNZ_OK)
+                                                                        if (unz64local_getLong(&s->z_filefunc, s->filestream,&uLZip64) != UNZ_OK)
                                                                                 err=UNZ_ERRNO;
                                                                 }
 
@@ -1514,6 +1514,7 @@ extern int ZEXPORT unzOpenCurrentFile3 (unzFile file, int* method,
     pfile_in_zip_read_info->size_local_extrafield = size_local_extrafield;
     pfile_in_zip_read_info->pos_local_extrafield=0;
     pfile_in_zip_read_info->raw=raw;
+    pfile_in_zip_read_info->byte_before_the_zipfile = 0;
 
     if (pfile_in_zip_read_info->read_buffer==NULL)
     {
@@ -1554,9 +1555,7 @@ extern int ZEXPORT unzOpenCurrentFile3 (unzFile file, int* method,
     pfile_in_zip_read_info->compression_method = s->cur_file_info.compression_method;
     pfile_in_zip_read_info->filestream=s->filestream;
     pfile_in_zip_read_info->z_filefunc=s->z_filefunc;
-#ifndef __clang_analyzer__
     pfile_in_zip_read_info->byte_before_the_zipfile=s->byte_before_the_zipfile;
-#endif
 
     pfile_in_zip_read_info->stream.total_out = 0;
 
