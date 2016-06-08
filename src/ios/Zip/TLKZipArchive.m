@@ -6,7 +6,7 @@
 //  Copyright (c) Sam Soffes 2010-2015. All rights reserved.
 //
 
-#import "SSZipArchive.h"
+#import "TLKZipArchive.h"
 #include "unzip.h"
 #include "zip.h"
 #import "zlib.h"
@@ -16,11 +16,11 @@
 
 #define CHUNK 16384
 
-@interface SSZipArchive ()
+@interface TLKZipArchive ()
 + (NSDate *)_dateWithMSDOSFormat:(UInt32)msdosDateTime;
 @end
 
-@implementation SSZipArchive
+@implementation TLKZipArchive
 {
 	NSString *_path;
 	NSString *_filename;
@@ -39,12 +39,12 @@
 	return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error delegate:nil progressHandler:nil completionHandler:nil];
 }
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<TLKZipArchiveDelegate>)delegate
 {
 	return [self unzipFileAtPath:path toDestination:destination overwrite:YES password:nil error:nil delegate:delegate progressHandler:nil completionHandler:nil];
 }
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<TLKZipArchiveDelegate>)delegate
 {
 	return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error delegate:delegate progressHandler:nil completionHandler:nil];
 }
@@ -72,7 +72,7 @@
 			  overwrite:(BOOL)overwrite
 			   password:(NSString *)password
 				  error:(NSError **)error
-			   delegate:(id<SSZipArchiveDelegate>)delegate
+			   delegate:(id<TLKZipArchiveDelegate>)delegate
 		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
 	  completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler
 {
@@ -377,7 +377,7 @@
 + (BOOL)createZipFileAtPath:(NSString *)path withFilesAtPaths:(NSArray *)paths
 {
 	BOOL success = NO;
-	SSZipArchive *zipArchive = [[SSZipArchive alloc] initWithPath:path];
+	TLKZipArchive *zipArchive = [[TLKZipArchive alloc] initWithPath:path];
 	if ([zipArchive open]) {
 		for (NSString *filePath in paths) {
 			[zipArchive writeFile:filePath];
@@ -401,7 +401,7 @@
     BOOL success = NO;
     
     NSFileManager *fileManager = nil;
-    SSZipArchive *zipArchive = [[SSZipArchive alloc] initWithPath:path];
+    TLKZipArchive *zipArchive = [[TLKZipArchive alloc] initWithPath:path];
     
     if ([zipArchive open]) {
         // use a local filemanager (queue/thread compatibility)
