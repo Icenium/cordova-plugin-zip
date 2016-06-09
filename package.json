@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-telerik-zip",
+  "cordova_name": "Zip Cordova Plugin",
+  "version": "1.0.0",
+  "description": "This plugin adds the SSZipArchive library for iOS",
+  "keywords": [
+    "cordova",
+    "cordova-ios",
+    "ecosystem:cordova"
+  ],
+  "platforms": [
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Icenium/cordova-plugin-zip.git"
+  },
+  "maintainers": [
+    {
+      "name": "telerik",
+      "email": "npm@telerik.com"
+    }
+  ],
+  "license": "MIT"
+}

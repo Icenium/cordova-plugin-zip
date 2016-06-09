@@ -12,16 +12,16 @@
 #import <Foundation/Foundation.h>
 #include "Common.h"
 
-@protocol SSZipArchiveDelegate;
+@protocol TLKZipArchiveDelegate;
 
-@interface SSZipArchive : NSObject
+@interface TLKZipArchive : NSObject
 
 // Unzip
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination;
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate;
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<TLKZipArchiveDelegate>)delegate;
 
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error;
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate;
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<TLKZipArchiveDelegate>)delegate;
 
 + (BOOL)unzipFileAtPath:(NSString *)path
 		  toDestination:(NSString *)destination
@@ -49,7 +49,7 @@
 
 @end
 
-@protocol SSZipArchiveDelegate <NSObject>
+@protocol TLKZipArchiveDelegate <NSObject>
 
 @optional
 

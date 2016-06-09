@@ -27,13 +27,13 @@
 		02F248971AD7A4B40094733E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 02F2488E1AD7A4B40094733E /* mztools.c */; };
 		02F248981AD7A4B40094733E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 02F248901AD7A4B40094733E /* unzip.c */; };
 		02F248991AD7A4B40094733E /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 02F248921AD7A4B40094733E /* zip.c */; };
-		02F2489A1AD7A4B40094733E /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F248951AD7A4B40094733E /* SSZipArchive.m */; };
+		02F2489A1AD7A4B40094733E /* TLKZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F248951AD7A4B40094733E /* TLKZipArchive.m */; };
 		02F248AB1AD7ABF50094733E /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F2488B1AD7A4B40094733E /* crypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AC1AD7ABF70094733E /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F2488D1AD7A4B40094733E /* ioapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AD1AD7ABFA0094733E /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F2488F1AD7A4B40094733E /* mztools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AE1AD7ABFC0094733E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248911AD7A4B40094733E /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AF1AD7ABFD0094733E /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248931AD7A4B40094733E /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02F248B01AD7AC000094733E /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248941AD7A4B40094733E /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02F248B01AD7AC000094733E /* TLKZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248941AD7A4B40094733E /* TLKZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87CA81321C3E91DA006682C9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 87CA81311C3E91DA006682C9 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -79,8 +79,8 @@
 		02F248911AD7A4B40094733E /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
 		02F248921AD7A4B40094733E /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
 		02F248931AD7A4B40094733E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		02F248941AD7A4B40094733E /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
-		02F248951AD7A4B40094733E /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		02F248941AD7A4B40094733E /* TLKZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLKZipArchive.h; sourceTree = "<group>"; };
+		02F248951AD7A4B40094733E /* TLKZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLKZipArchive.m; sourceTree = "<group>"; };
 		87CA81311C3E91DA006682C9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				02F2488A1AD7A4B40094733E /* minizip */,
-				02F248941AD7A4B40094733E /* SSZipArchive.h */,
-				02F248951AD7A4B40094733E /* SSZipArchive.m */,
+				02F248941AD7A4B40094733E /* TLKZipArchive.h */,
+				02F248951AD7A4B40094733E /* TLKZipArchive.m */,
 				87CA81311C3E91DA006682C9 /* Common.h */,
 			);
 			path = Zip;
@@ -174,7 +174,7 @@
 				87CA81321C3E91DA006682C9 /* Common.h in Headers */,
 				02F248AB1AD7ABF50094733E /* crypt.h in Headers */,
 				02F248AC1AD7ABF70094733E /* ioapi.h in Headers */,
-				02F248B01AD7AC000094733E /* SSZipArchive.h in Headers */,
+				02F248B01AD7AC000094733E /* TLKZipArchive.h in Headers */,
 				02F248AF1AD7ABFD0094733E /* zip.h in Headers */,
 				02F248AD1AD7ABFA0094733E /* mztools.h in Headers */,
 				02F248AE1AD7ABFC0094733E /* unzip.h in Headers */,
@@ -307,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F248981AD7A4B40094733E /* unzip.c in Sources */,
-				02F2489A1AD7A4B40094733E /* SSZipArchive.m in Sources */,
+				02F2489A1AD7A4B40094733E /* TLKZipArchive.m in Sources */,
 				02F248991AD7A4B40094733E /* zip.c in Sources */,
 				02F248971AD7A4B40094733E /* mztools.c in Sources */,
 				02F248961AD7A4B40094733E /* ioapi.c in Sources */,
