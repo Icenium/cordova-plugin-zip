@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-telerik-zip",
   "cordova_name": "Zip Cordova Plugin",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This plugin adds the SSZipArchive library for iOS",
   "keywords": [
     "cordova",
