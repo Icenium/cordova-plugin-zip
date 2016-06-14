@@ -34,6 +34,9 @@
 		02F248AE1AD7ABFC0094733E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248911AD7A4B40094733E /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AF1AD7ABFD0094733E /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248931AD7A4B40094733E /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248B01AD7AC000094733E /* TLKZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248941AD7A4B40094733E /* TLKZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87C2DF561D1002E000270E47 /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87C2DF541D0FFE4700270E47 /* Info.plist */; };
+		87C2DF571D1002E000270E47 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87C2DF551D0FFE4700270E47 /* module.modulemap */; };
+		87C2DF591D1004BD00270E47 /* Zip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C2DF581D10047E00270E47 /* Zip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87CA81321C3E91DA006682C9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 87CA81311C3E91DA006682C9 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,9 +61,11 @@
 		02F2486E1AD7A3A80094733E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				87C2DF561D1002E000270E47 /* Info.plist in CopyFiles */,
+				87C2DF571D1002E000270E47 /* module.modulemap in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +74,6 @@
 /* Begin PBXFileReference section */
 		02F248701AD7A3A80094733E /* libZip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZip.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F2487B1AD7A3A90094733E /* ZipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F248811AD7A3A90094733E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F2488B1AD7A4B40094733E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		02F2488C1AD7A4B40094733E /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		02F2488D1AD7A4B40094733E /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		02F248931AD7A4B40094733E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		02F248941AD7A4B40094733E /* TLKZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLKZipArchive.h; sourceTree = "<group>"; };
 		02F248951AD7A4B40094733E /* TLKZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLKZipArchive.m; sourceTree = "<group>"; };
+		87C2DF541D0FFE4700270E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C2DF551D0FFE4700270E47 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		87C2DF581D10047E00270E47 /* Zip-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
 		87CA81311C3E91DA006682C9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				02F248721AD7A3A80094733E /* Zip */,
-				02F2487F1AD7A3A90094733E /* ZipTests */,
 				02F248711AD7A3A80094733E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,28 +130,14 @@
 		02F248721AD7A3A80094733E /* Zip */ = {
 			isa = PBXGroup;
 			children = (
+				87C2DF531D0FFC9D00270E47 /* Supporting Files */,
 				02F2488A1AD7A4B40094733E /* minizip */,
 				02F248941AD7A4B40094733E /* TLKZipArchive.h */,
 				02F248951AD7A4B40094733E /* TLKZipArchive.m */,
 				87CA81311C3E91DA006682C9 /* Common.h */,
+				87C2DF581D10047E00270E47 /* Zip-umbrella.h */,
 			);
 			path = Zip;
-			sourceTree = "<group>";
-		};
-		02F2487F1AD7A3A90094733E /* ZipTests */ = {
-			isa = PBXGroup;
-			children = (
-				02F248801AD7A3A90094733E /* Supporting Files */,
-			);
-			path = ZipTests;
-			sourceTree = "<group>";
-		};
-		02F248801AD7A3A90094733E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				02F248811AD7A3A90094733E /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		02F2488A1AD7A4B40094733E /* minizip */ = {
@@ -164,6 +156,15 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		87C2DF531D0FFC9D00270E47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87C2DF541D0FFE4700270E47 /* Info.plist */,
+				87C2DF551D0FFE4700270E47 /* module.modulemap */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,6 +179,7 @@
 				02F248AF1AD7ABFD0094733E /* zip.h in Headers */,
 				02F248AD1AD7ABFA0094733E /* mztools.h in Headers */,
 				02F248AE1AD7ABFC0094733E /* unzip.h in Headers */,
+				87C2DF591D1004BD00270E47 /* Zip-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\n\n# Create framework structure\nmkdir -p \"${FRAMEWORK_LOCN}/Headers\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Headers\"";
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\n\n# Create framework structure\nmkdir -p \"${FRAMEWORK_LOCN}/Headers\"\nmkdir -p \"${FRAMEWORK_LOCN}/Modules\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Headers\"\n\n# Copy the modulemap file into the framework\n/bin/cp \"${TARGET_BUILD_DIR}/module.modulemap\" \\\n\"${FRAMEWORK_LOCN}/Modules\"\n\n# Copy the Info plist file into the framework\n/bin/cp \"${TARGET_BUILD_DIR}/Info.plist\" \\\n\"${FRAMEWORK_LOCN}/\"";
 		};
 		02F248A71AD7AB430094733E /* Multi-Platform Build */ = {
 			isa = PBXShellScriptBuildPhase;
