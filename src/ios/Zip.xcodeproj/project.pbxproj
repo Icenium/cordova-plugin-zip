@@ -34,6 +34,9 @@
 		02F248AE1AD7ABFC0094733E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248911AD7A4B40094733E /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248AF1AD7ABFD0094733E /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248931AD7A4B40094733E /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F248B01AD7AC000094733E /* TLKZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F248941AD7A4B40094733E /* TLKZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87C2DF561D1002E000270E47 /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87C2DF541D0FFE4700270E47 /* Info.plist */; };
+		87C2DF571D1002E000270E47 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87C2DF551D0FFE4700270E47 /* module.modulemap */; };
+		87C2DF591D1004BD00270E47 /* Zip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C2DF581D10047E00270E47 /* Zip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87CA81321C3E91DA006682C9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 87CA81311C3E91DA006682C9 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,9 +61,11 @@
 		02F2486E1AD7A3A80094733E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				87C2DF561D1002E000270E47 /* Info.plist in CopyFiles */,
+				87C2DF571D1002E000270E47 /* module.modulemap in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +74,6 @@
 /* Begin PBXFileReference section */
 		02F248701AD7A3A80094733E /* libZip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZip.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F2487B1AD7A3A90094733E /* ZipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F248811AD7A3A90094733E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F2488B1AD7A4B40094733E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		02F2488C1AD7A4B40094733E /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		02F2488D1AD7A4B40094733E /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		02F248931AD7A4B40094733E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		02F248941AD7A4B40094733E /* TLKZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLKZipArchive.h; sourceTree = "<group>"; };
 		02F248951AD7A4B40094733E /* TLKZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLKZipArchive.m; sourceTree = "<group>"; };
+		87C2DF541D0FFE4700270E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C2DF551D0FFE4700270E47 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		87C2DF581D10047E00270E47 /* Zip-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
 		87CA81311C3E91DA006682C9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				02F248721AD7A3A80094733E /* Zip */,
-				02F2487F1AD7A3A90094733E /* ZipTests */,
 				02F248711AD7A3A80094733E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,28 +130,14 @@
 		02F248721AD7A3A80094733E /* Zip */ = {
 			isa = PBXGroup;
 			children = (
+				87C2DF531D0FFC9D00270E47 /* Supporting Files */,
 				02F2488A1AD7A4B40094733E /* minizip */,
 				02F248941AD7A4B40094733E /* TLKZipArchive.h */,
 				02F248951AD7A4B40094733E /* TLKZipArchive.m */,
 				87CA81311C3E91DA006682C9 /* Common.h */,
+				87C2DF581D10047E00270E47 /* Zip-umbrella.h */,
 			);
 			path = Zip;
-			sourceTree = "<group>";
-		};
-		02F2487F1AD7A3A90094733E /* ZipTests */ = {
-			isa = PBXGroup;
-			children = (
-				02F248801AD7A3A90094733E /* Supporting Files */,
-			);
-			path = ZipTests;
-			sourceTree = "<group>";
-		};
-		02F248801AD7A3A90094733E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				02F248811AD7A3A90094733E /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		02F2488A1AD7A4B40094733E /* minizip */ = {
@@ -164,6 +156,15 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		87C2DF531D0FFC9D00270E47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87C2DF541D0FFE4700270E47 /* Info.plist */,
+				87C2DF551D0FFE4700270E47 /* module.modulemap */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,6 +179,7 @@
 				02F248AF1AD7ABFD0094733E /* zip.h in Headers */,
 				02F248AD1AD7ABFA0094733E /* mztools.h in Headers */,
 				02F248AE1AD7ABFC0094733E /* unzip.h in Headers */,
+				87C2DF591D1004BD00270E47 /* Zip-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\n\n# Create framework structure\nmkdir -p \"${FRAMEWORK_LOCN}/Headers\"\nmkdir -p \"${FRAMEWORK_LOCN}/Modules\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Headers\"\n\n# Copy the modulemap file into the framework\n/bin/cp \"${TARGET_BUILD_DIR}/module.modulemap\" \\\n\"${FRAMEWORK_LOCN}/Modules\"\n\n# Copy the Info plist file into the framework\n/bin/cp \"${TARGET_BUILD_DIR}/Info.plist\" \\\n\"${FRAMEWORK_LOCN}/\"";
 		};
 		02F248A71AD7AB430094733E /* Multi-Platform Build */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -297,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${PROJECT_DIR}/${RW_FRAMEWORK_NAME}.framework\"";
+			shellScript = "/bin/sh \"$SRCROOT/multi_platform_build.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
