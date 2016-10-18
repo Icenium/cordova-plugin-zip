@@ -11,6 +11,7 @@
 #include "zip.h"
 #import "zlib.h"
 #import "zconf.h"
+#include <errno.h>
 
 #include <sys/stat.h>
 
@@ -237,7 +238,16 @@
 			}
 
 			if (!fileIsSymbolicLink) {
+                if ([NSFileManager.defaultManager fileExistsAtPath:fullPath]) {
+                    [NSFileManager.defaultManager removeItemAtPath:fullPath error:nil];
+                }
+                
 	            FILE *fp = fopen((const char*)[fullPath UTF8String], "wb");
+                
+                if(!fp){
+                    NSLog(@"Error%s", strerror(errno));
+                }
+                
 	            while (fp) {
 	                int readBytes = unzReadCurrentFile(zip, buffer, 4096);
 
