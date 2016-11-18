@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-telerik-zip"
-	version="1.0.0">
+	version="1.0.5">
 	<name>Telerik ZIP Plugin</name>
 	<description>A Cordova plugin for zipping and unzipping files</description>
 	<license>MIT</license>
